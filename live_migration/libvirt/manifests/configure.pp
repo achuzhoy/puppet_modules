@@ -11,10 +11,9 @@ class libvirt::configure {
     line =>'listen_tls = 0',
     match => "^.*listen_tls =.*$",
   }
-  
   file {$libvirt_file:
     ensure => present,
-    require => File_line['append'],
+    require => File_line[$libvirt_conf],
   }
   file_line {$libvirt_file:
     require => File[$libvirt_file],
