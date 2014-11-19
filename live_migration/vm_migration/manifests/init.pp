@@ -1,4 +1,5 @@
 class vm_migration {
+  Exec { path => [ "/bin/", "/sbin/" , "/usr/bin/", "/usr/sbin/" ] }
   include libvirt
-  #include iptables::prep
+  include iptables
 }
