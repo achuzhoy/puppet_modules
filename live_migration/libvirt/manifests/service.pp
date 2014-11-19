@@ -3,5 +3,6 @@ class libvirt::service {
     require => Class['libvirt::package'],
     ensure => 'running',
     enable => 'true',
+    subscribe => Class['libvirt::configure'],
   }
 }
