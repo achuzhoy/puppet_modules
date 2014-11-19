@@ -1,3 +1,3 @@
 puppet_modules
 ==============
-Puppet modules to help with the daily RHOS routines.
+Ad hoc puppet modules to help with the daily RHOS routines.
